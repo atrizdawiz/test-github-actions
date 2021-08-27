@@ -14,7 +14,6 @@ COPY --from=deps /app/node_modules ./node_modules
 
 ENV LOCAL_CACHE=true
 
-RUN yarn clean
 RUN yarn build
 
 # Production image, copy all the files and run app
