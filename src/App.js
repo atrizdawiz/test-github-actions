@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Jennie och Andreas Pipeline lyckades!</p>
+        <p>Jennie och Andreas Pipeline lyckades, nu kör vi en demo!</p>
         <a
           className="App-link"
           href="https://urplay.se"
