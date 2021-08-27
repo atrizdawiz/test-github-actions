@@ -29,6 +29,7 @@ jobs:
           urls: |
             /
           budgetPath: ./budget.json # test performance budgets
+          runs: 3
           configPath: "./lighthouserc.json"
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
