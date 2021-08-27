@@ -23,6 +23,16 @@ jobs:
       - run: yarn install
       - run: yarn build
       - run: yarn test
+      - run: yarn start
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v8
+        with:
+          urls: |
+            https://example.com/
+            https://example.com/blog
+          budgetPath: ./budget.json # test performance budgets
+          uploadArtifacts: true # save results as an action artifacts
+          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
       - name: Build and Push Docker Image
         uses: mr-smithers-excellent/docker-build-push@v4
         with:
