@@ -28,6 +28,7 @@ RUN adduser -S nodeapp -u 1001
 RUN chown -R nodeapp:actiontest /app
 
 COPY --from=builder /app/build ./
+COPY --from=builder /app/public ./public
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
 
